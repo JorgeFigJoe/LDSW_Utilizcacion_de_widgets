@@ -1,24 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:ldsw_utilizcacion_de_widgets/columns.dart';
+import 'package:ldsw_utilizcacion_de_widgets/rows.dart';
+import 'package:ldsw_utilizcacion_de_widgets/stack.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(EjemplosWidgets());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class EjemplosWidgets extends StatelessWidget {
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext){
     return MaterialApp(
-      title: 'Welcome to Flutter',
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Welcome to Flutter'),
-        ),
-        body: const Center(
-          child: Text('Hello World'),
+        body: Container(
+          width: double.infinity,
+          color: Colors.black,
+          child: Center(
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                Columns(),
+                Rowss(),
+                Stacks()
+              ],
+            ),
+          ),
         ),
       ),
     );
   }
+
 }
+
